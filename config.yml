@@ -2,14 +2,14 @@
 # Homepage configuration
 # See https://fontawesome.com/v5/search for icons options
 
-# Optbbhbhjhbional: Use external configuration file.
+# Optional: Use external configuration file.
 # Using this will ignore remaining config in this file
 externalConfig: https://raw.githubusercontent.com/daytooth/homerconfig/main/config.yml
 
 title: "App dashboard"
 subtitle: "Homer"
 # documentTitle: "Welcome" # Customize the browser tab text
-logo: "assets/logo.png"
+logo: "fas fa-server"
 # Alternatively a fa icon can be provided:
 # icon: "fas fa-skull-crossbones"
 
@@ -74,7 +74,7 @@ colors:
     background-image: "assets/your/dark/bg.png"
 
 # Optional message
-message:
+# message:
   # url: "https://<my-api-endpoint>" # Can fetch information from an endpoint to override value below.
   # mapping: # allows to map fields from the remote format to the one expected by Homer
   #   title: 'id' # use value from field 'id' as title
@@ -87,18 +87,17 @@ message:
   #   title: 'id'
   #   content: 'value'
   # refreshInterval: 10000
-  style: "is-warning"
-  title: "Optional message!"
-  icon: "fa fa-exclamation-triangle"
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  #style: "is-warning"
+  #title: "Optional message!"
+  #icon: "fa fa-exclamation-triangle"
+  #content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
 links:
-  - name: "Link 1"
-    icon: "fab fa-github"
-    url: "https://github.com/bastienwirtz/homer"
-    target: "_blank" # optional html tag target attribute
+  - name: "YouTube"
+    logo: "assets/daily/youtube.png"
+    url: "https://youtube.com"
   - name: "link 2"
     icon: "fas fa-book"
     url: "https://github.com/bastienwirtz/homer"
@@ -112,38 +111,21 @@ links:
 # First level array represents a group.
 # Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
 services:
--name: "Weather"
-location: "Auckland"
-locationId: "2193733"
-apikey: "1b33ff29610d8b70a22efb80f9a310c8"
-units: "metric"
-background: "square"
-type: "OpenWeather"
-
-  - name: "Application"
-    icon: "fas fa-code-branch"
-    # A path to an image can also be provided. Note that icon take precedence if both icon and logo are set.
-    # logo: "path/to/logo"
+  - name: "Network"
+    icon: "fas fa-network-wired"
     items:
-      - name: "Awesome app"
+      - name: "SpeedTest"
         logo: "assets/tools/sample.png"
-        # Alternatively a fa icon can be provided:
-        # icon: "fab fa-jenkins"
-        subtitle: "Bookmark example"
-        tag: "app"
-        keywords: "self hosted reddit" # optional keyword used for searching purpose
-        url: "https://www.reddit.com/r/selfhosted/"
+        type: "SpeedtestTracker"
+      - name: "Portainer"
+        logo: "assets/tools/sample.png"
+        url: "http://192.168.0.151/"
+        type: "Portainer"
+        apikey: "<---insert-api-key-here--->"
+        # environments:
+        #   - "raspberry"
+           - "local"
         target: "_blank" # optional html tag target attribute
-      - name: "Another one"
-        logo: "assets/tools/sample2.png"
-        subtitle: "Another application"
-        tag: "app"
-        # Optional tagstyle
-        tagstyle: "is-success"
-        url: "#"
-  - name: "Other group"
-    icon: "fas fa-heartbeat"
-    items:
       - name: "Pi-hole"
         logo: "assets/tools/sample.png"
         # subtitle: "Network-wide Ad Blocking" # optional, if no subtitle is defined, PiHole statistics will be shown
@@ -153,3 +135,20 @@ type: "OpenWeather"
         target: "_blank" # optional html a tag target attribute
         # class: "green" # optional custom CSS class for card, useful with custom stylesheet
         # background: red # optional color for card to set color directly without custom stylesheet
+
+  - name: "Media Server"
+    icon: "fas fa-projector"
+    items:
+      - name: "Jellyfin"
+        logo: "assets/tools/sample.png"
+        url: "http://192.168.0.151/"
+        type: "Jellyfin"
+        apikey: "<---insert-api-key-here--->"
+        libraryType: "movies" #Choose which stats to show. Can be one of: music, series or movies.
+      - name: "qBittorrent"
+        logo: "assets/tools/sample.png"
+        url: "http://192.168.1.2:8080" # Your rTorrent web UI, f.e. ruTorrent or Flood.
+        type: "qBittorrent"
+        rateInterval: 2000 # Interval for updating the download and upload rates.
+        torrentInterval: 5000 # Interval for updating the torrent count.
+        target: "_blank" # optional html a tag target attribute
