@@ -17,7 +17,8 @@ header: true # Set to false to hide the header
 # Optional: Different hotkey for search, defaults to "/"
 # hotkey:
 #   search: "Shift"
-footer: '<p>Made by<span class="has-text-danger">Nunya</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i class="fab fa-github-alt"></i></a></p>' # set false if you want to hide it.
+#i made foot optional will see what happens
+#footer: '<p>Made by<span class="has-text-danger">Nunya</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i class="fab fa-github-alt"></i></a></p>' # set false if you want to hide it.
 
 columns: "3" # "auto" or number (must be a factor of 12: 1, 2, 3, 4, 6, 12)
 connectivityCheck: true # whether you want to display a message when the apps are not accessible anymore (VPN disconnected for example).
@@ -73,7 +74,7 @@ colors:
     link-hover: "#ffdd57"
     background-image: "assets/your/dark/bg.png"
 
-# Optional message
+# Optional message has been made optional
 # message:
   # url: "https://<my-api-endpoint>" # Can fetch information from an endpoint to override value below.
   # mapping: # allows to map fields from the remote format to the one expected by Homer
@@ -92,7 +93,7 @@ colors:
   #icon: "fa fa-exclamation-triangle"
   #content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 
-# Optional navbar
+# Optional navbar has been kept on but need some links for it
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
 links:
   - name: "YouTube"
@@ -119,7 +120,7 @@ services:
         type: "SpeedtestTracker"
       - name: "Portainer"
         logo: "assets/tools/sample.png"
-        url: "http://192.168.0.151/"
+        url: "http://192.168.0.151/" #change this ip
         type: "Portainer"
         apikey: "<---insert-api-key-here--->"
         # environments:
@@ -130,7 +131,7 @@ services:
         logo: "assets/tools/sample.png"
         # subtitle: "Network-wide Ad Blocking" # optional, if no subtitle is defined, PiHole statistics will be shown
         tag: "other"
-        url: "http://192.168.0.151/admin"
+        url: "http://192.168.0.151/admin" #change this ip
         type: "PiHole" # optional, loads a specific component that provides extra features. MUST MATCH a file name (without file extension) available in `src/components/services`
         target: "_blank" # optional html a tag target attribute
         # class: "green" # optional custom CSS class for card, useful with custom stylesheet
@@ -141,13 +142,13 @@ services:
     items:
       - name: "Jellyfin"
         logo: "assets/tools/sample.png"
-        url: "http://192.168.0.151/"
+        url: "http://192.168.0.151/" #change this ip
         type: "Jellyfin"
         apikey: "<---insert-api-key-here--->"
         libraryType: "movies" #Choose which stats to show. Can be one of: music, series or movies.
       - name: "qBittorrent"
         logo: "assets/tools/sample.png"
-        url: "http://192.168.1.2:8080" # Your rTorrent web UI, f.e. ruTorrent or Flood.
+        url: "http://192.168.1.2:8080" #change this ip # Your rTorrent web UI, f.e. ruTorrent or Flood.
         type: "qBittorrent"
         rateInterval: 2000 # Interval for updating the download and upload rates.
         torrentInterval: 5000 # Interval for updating the torrent count.
