@@ -4,7 +4,7 @@
 
 # Optbbhbhjhbional: Use external configuration file.
 # Using this will ignore remaining config in this file
-externalConfig: https://example.com/server-luci/config.yaml
+externalConfig: https://raw.githubusercontent.com/daytooth/homerconfig/main/config.yml
 
 title: "App dashboard"
 subtitle: "Homer"
