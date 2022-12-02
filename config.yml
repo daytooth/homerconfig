@@ -4,7 +4,7 @@
 
 # Optional: Use external configuration file.
 # Using this will ignore remaining config in this file
-# externalConfig: https://example.com/server-luci/config.yaml
+externalConfig: https://example.com/server-luci/config.yaml
 
 title: "App dashboard"
 subtitle: "Homer"
