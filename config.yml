@@ -125,7 +125,7 @@ services:
         apikey: "<---insert-api-key-here--->"
         # environments:
         #   - "raspberry"
-           - "local"
+        #- "local"
         target: "_blank" # optional html tag target attribute
       - name: "Pi-hole"
         logo: "assets/tools/sample.png"
