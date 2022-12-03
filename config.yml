@@ -120,9 +120,9 @@ services:
         type: "SpeedtestTracker"
       - name: "Portainer"
         logo: "assets/tools/sample.png"
-        url: "http://192.168.0.151/" #change this ip
+        url: "http://192.168.1.45:9000" #change this ip
         type: "Portainer"
-        apikey: "<---insert-api-key-here--->"
+        apikey: "ptr_QAstjMOsf+SzR847eBFaslqC+41NlfVYbJHjOYdPsp4="
         # environments:
         #   - "raspberry"
         #- "local"
